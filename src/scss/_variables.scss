@@ -1,0 +1,45 @@
+//Fuentes
+
+$f-principal: 'Dosis', sand-serif;
+$f-titulo: 'Oxygen', sand-serif;
+$f-titulos: $f-titulo;
+$f-cuerpo: $f-principal;
+
+// Tamaños de Fuente
+$t-f-base: 18px;
+$t-f-grande: $t-f-base + 6px;
+$t-f-media: $t-f-base - 3px;
+$t-f-peque: $t-f-base - 6px;
+$t-f-h1: $t-f-base + 15px;
+$t-f-h2: $t-f-base + 12px;
+$t-f-h3: $t-f-base + 9px;
+$t-f-h4: $t-f-base + 6px;
+$t-f-h5: $t-f-base + 3px;
+$t-f-h6: $t-f-base;
+
+//Colores
+$clr-blanco:#fff;
+$clr-negro:#333;
+$clr-negro-opaco:#504C4C;
+$clr-gris:#EBEDEA;
+$clr-azul-claro:#E1E7ED;
+$clr-azul-osc:#C4D4E5;
+$clr-amarillo-claro:#EAF2A8;;
+
+//Gama de Colores Principal
+$clr-base1:#EDE7DE;
+$clr-base2:#D9CFBB;
+$clr-base3:#D4CFC7;
+$clr-base4:#CFC39D;
+$clr-base5:#928E8C;
+
+//Fondo
+$clr-fondo:#F8F6F2;
+
+$color-tx-ppal: $clr-negro-opaco;
+$fondo-ppal: $clr-blanco;
+
+//Tamaños Responsive
+$ancho-pc: 900px;
+$ancho-tableta: 737px;
+$ancho-mobil: $ancho-tableta - 1px;

@@ -1,0 +1,18 @@
+//Mixins
+@mixin es-pc{
+	@media all and (min-width: #{$ancho-pc}){
+		@content;
+	}
+}
+
+@mixin es-tableta{
+	@media all and (min-width: #{$ancho-tableta}){
+		@content;
+	}
+}
+
+@mixin es-mobil{
+	@media all and (max-width: #{$ancho-mobil}){
+		@content;
+	}
+}

@@ -1,0 +1,145 @@
+.contComentarios{
+	width:95%;
+	margin:0 auto;
+	padding:10px;
+	padding-top:70px;
+	border-top: 1px solid $clr-base4;
+
+	.comentario{
+		width:300px;
+		margin-bottom:20px;
+
+		@include es-mobil{
+			width:95%;
+		}
+
+		.imgComentario{
+			width:60px;
+			height:60px;
+			background-color:$clr-base1;
+			border-radius:50%;
+			float:left;
+			margin-left:-10px;
+			margin-top:10px;
+		}
+
+		.conTxtCom{
+			margin-left:60px;
+			padding:5px;
+
+			h3{
+				font-weight: bold;
+				font-family:$f-titulos;
+			}
+
+			p{
+				line-height: 1.2;
+				padding-top:5px;
+				color:$clr-negro-opaco;
+			}
+
+			.comDatos{
+				font-size:$t-f-media;
+				color:$clr-negro-opaco;
+				margin-top: 8px;
+				border-top: 1px solid $clr-base4;
+				display:inline-block;
+				width:100%;
+			}
+		}
+	}
+}
+
+.comFlex{
+	display: -webkit-flex;
+  	display: flex;
+  	flex-wrap: wrap;
+  	flex-direction:row;
+  	justify-content: space-around;
+}
+
+.frmComentarios{
+	padding:5px;
+	margin-top:10px;
+	padding-bottom:20px;
+
+	div{
+		width:300px;
+		margin-top:10px;
+
+		label{
+			display:block;
+			color:$clr-negro-opaco;
+		}
+
+		@include es-mobil{
+			width:95%;
+		}
+	}
+	
+	.contComm{
+		width:95%;
+		margin-top:20px;
+
+		label{
+			text-align:center;
+		}
+	}
+}
+
+.tituloCom{
+	font-weight: bold;
+	font-size:$t-f-grande;
+	font-family:$f-titulo;
+	margin-left:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.form{
+	.inputTxt{
+		width:95%;
+		padding:8px;
+		border:none;
+		border-bottom: 1px solid $clr-base4;
+		margin-top:5px;
+		font-family:$f-principal;
+		font-size:$t-f-base;
+	}
+
+	.txtArea{
+		width:100%;
+		height: 100px;
+		resize:none;
+	}
+
+	.contPalabras{
+		font-size:$t-f-media;
+	}
+
+	input[type="submit"]{
+		margin-top:15px;
+		padding:5px;
+		font-family:$f-principal;
+		text-transform:Uppercase;
+		cursor:pointer;
+		background-color:$clr-base1;
+		border: 1px solid $clr-base3;
+		border-radius:5px;
+		width:150px;
+		transition: all 0.5s;
+
+		&:hover{
+			background-color:$clr-base2;
+		}
+	}
+
+	.contBtn{
+		text-align:center;
+	}
+}
+
+.cargComentarios{
+	text-align:center;
+	padding:5px;
+}

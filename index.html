@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Escribelo!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="dist/css/estilo.css" />
+</head>
+<body>
+	<div id="cabecera">
+		<header class="cabecera">
+			<button id="btnMenu" class="btnE bIzq">Menu</button>
+			<button id="btnVolver oculto" class="btnE bIzqV">Volver</button>
+			<h1 class="">Escribelo!</h1>
+			<button class="btnE bDer">Ingresar</button>
+			<button class="btnE bDer">Registrarse</button>
+			<nav class="menu oMenu">
+					<div>
+						<div><input type="text" placeholder="Buscar" /></div>
+						<ul>
+							<li>Todas</li>
+							<li>Ciencia</li>	
+							<li>Deportes</li>
+							<li>Musica</li>
+							<li>Cine</li>
+							<li>Televisión</li>
+							<li>Videojuegos</li>
+							<li>Android</li>
+							<li class="btnIngresar">Ingresar</li>
+						</ul>
+					</div>
+				</nav>
+		</header>
+	</div>
+	<div id="articuloCompleto" class="articuloCompleto oculto">
+		<a id="aComentarios" href="#contComentarios" class="oculto">ancla Comentarios</a>
+		<a id="aArticulo" href="#art1" class="oculto">ancla Articulos</a>
+		<div class="contenedorArtFull">
+			<div class="dtArticuloFull">
+				<div class="imgAutorFull">
+					<img src="dist/img/house.jpg" alt="Autor" />
+				</div>
+				<div class="nAutorFull">
+					<h5>Cristian Camilo Cantillo Zuluaga Muñoz Duque</h5>
+					<div>Hace 2 días</div>
+				</div>
+			</div>
+
+			<div class="titArticuloFull">Atletico Nacional campeón de la Copa Libertadores 2016</div>
+
+			<div class="txtArticuloFull">
+				<div class="imgArtFull"><img src="dist/img/img5.jpg" /></div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="cursiva">Tempore</span> adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia repellat, necessitatibus recusandae, veritatis cumque. Voluptatibus maiores aliquid iusto. Cum, <a href="https://en.wiktionary.org/wiki/blanditiis" target="_blank">blanditiis?</a>
+
+					Lorem ipsum dolor sit amet,consectetur adipisicing elit. Tempore adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia repellat, <span class="negrita">texto</span> necessitatibus recusandae, veritatis cumque. Voluptatibus maiores aliquid iusto. Cum, blanditiis?
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia <span class="negrita">repellat</span>, necessitatibus recusandae, veritatis cumque. Voluptatibus maiores aliquid iusto. Cum, blanditiis?
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia repellat, necessitatibus recusandae, <span class="cursiva">veritatis</span> cumque. Voluptatibus maiores aliquid iusto. Cum, blanditiis?
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore. Voluptatibus maiores aliquid iusto. Cum, blanditiis?
+					Lorem ipsum dolor sit amet, consectetur. Tempore adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia repellat, necessitatibus <span class="negrita">recusandae</span>, veritatis cumque.
+				</p>
+				<div class="imgArtFull"><img src="dist/img/img6.jpg" /></div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia <span class="negrita">repellat</span>, necessitatibus recusandae, veritatis cumque. Voluptatibus maiores aliquid iusto. Cum, blanditiis?
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore adipisci sint impedit eveniet quidem tenetur unde et fugit mollitia repellat, necessitatibus recusandae, veritatis cumque. Voluptatibus maiores aliquid iusto. Cum, <span class="cursiva">blanditiis?</span>
+				</p>
+			</div>
+			<div>
+				<div id="contComentarios" class="contComentarios comFlex"></div>
+				<div class="cargComentarios oculto" id="pBar2Cont">
+					<div>Cargando Comentarios</div>
+					<progress value="1" max="100" id="pBar2"></progress>
+				</div>
+			</div>
+			
+			<div class="contComentarios">
+				<div class="tituloCom">Escribe un comentario sobre el artículo</div>
+				<div class="frmComentarios">
+					<form class="comFlex form" id="frmArt">
+						<div>
+							<label class="negrita">Nombre</label>
+							<input type="text" placeholder="Ingresa tu Nombre" id="nombre" class="inputTxt" required />
+						</div>
+						<div>
+							<label class="negrita">Apellido</label>
+							<input type="text" placeholder="Ingresa tu Apellido" id="apellido" class="inputTxt" required />
+						</div>
+						<div >
+							<label class="negrita">Correo</label>
+							<input type="email" placeholder="Ingresa tu Correo" id="correo" class="inputTxt" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required />
+						</div>
+						<div></div>
+						<div class="contComm">
+							<label class="negrita">Comentario</label>
+							<textarea class="inputTxt txtArea" placeholder="Deja tu comentario, no debe superar las 120 palabras" id="comentario" required></textarea>
+							<div class="contPalabras cursiva"><span id="numPalabras">0</span> Palabras</div>
+						</div>
+						<div class="contBtn">
+							<input type="submit" id="btnEnviar" value="Enviar Comentario" />
+							<div class="oculto" id="pBarCont"><progress value="1" max="100" id="pBar"></progress></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="lstArticulos">
+		<div class="cuerpo">
+			<div class="contenedor">
+				
+
+				<div class="contenido">
+					<section class="todosArticulos">
+						<article class="contArticulo" data-idArt="1" id="art1">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/angelina.jpeg" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Nombre Autor 1</h5>
+									<div>Hace 45 Segundos</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Titulo 1 del artículo</div>	
+							</div>
+							
+							<div class="imgArticulo">
+								<img src="dist/img/img1.png" alt="Img Articulo" />
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="2" id="art2">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/estudiante.jpg" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Nombre Autor 2</h5>
+									<div>Hace 2 Horas</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Otro Artículo para ver cómo se ve</div>	
+							</div>
+							
+							<div class="imgArticulo">
+								<img src="dist/img/img2.jpg" alt="Img Articulo" />
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="3" id="art3">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/kate.jpg" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Otro Autor</h5>
+									<div>Hace 1 Día</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Titulo del articulo</div>	
+							</div>
+							
+							<div class="imgArticulo">
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="4" id="art4">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/ph.png" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Autor</h5>
+									<div>Hace 6 Minutos</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis temporibus deleniti, ex, quos, eligendi.</div>	
+							</div>
+							
+							<div class="imgArticulo">
+								
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="5" id="art5">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/ph.png" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Nombre Autor</h5>
+									<div>Este Miercoles</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Titulo del artículo</div>	
+							</div>
+							
+							<div class="imgArticulo">
+							
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="6" id="art6">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/house.jpg" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Juan Carlos Gonzalez</h5>
+									<div>Hace una Semana</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Titulo del artículo de Juan</div>	
+							</div>
+							
+							<div class="imgArticulo">
+								<video width="250" height="180" controls>
+									<source src="video/videoRC.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="7" id="art7">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/ph.png" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Nombre Autor</h5>
+									<div>21/06/2016 a las 3:40 p.m</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Este fue hace mucho rato</div>	
+							</div>
+							
+							<div class="imgArticulo">
+								<img src="dist/img/img3.jpg" alt="Img Articulo" />
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+
+								Consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="8" id="art8">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/ph.png" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Nombre Autor</h5>
+									<div>Hace 5 minutos</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Titulo artículo</div>	
+							</div>
+							
+							<div class="imgArticulo">
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="9" id="art9">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/ph.png" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Cristian Cantillo</h5>
+									<div>Hace media hora</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Curso de Front-End Ninja</div>	
+							</div>
+							
+							<div class="imgArticulo">
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+
+						<article class="contArticulo" data-idArt="10" id="art10">
+							<div class="dtArticulo">
+								<div class="imgAutor">
+									<img src="dist/img/ph.png" alt="Autor" />
+								</div>
+								<div class="nAutor">
+									<h5>Nombre Autor </h5>
+									<div>Hace 2 horas</div>
+								</div>
+							</div>
+
+							<div class="cabArticulo">
+								<div class="titArticulo">Titulo articulo acá</div>	
+							</div>
+							
+							<div class="imgArticulo">
+								<img src="dist/img/img4.gif" alt="Img Articulo" />
+							</div>
+							<div class="txtArticulo">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste magnam harum sed eveniet accusamus laboriosam atque ex quasi eaque. Voluptatum.
+							</div>
+							<div class="contIcoOpc">
+								<span class="iconoOpc iCom"><img src="dist/img/com.png"><span>0</span></span>
+								<span class="iconoOpc iMgusta">
+								<img src="dist/img/carita.png"><span></span></span>
+							</div>
+							
+						</article>
+					</section>
+					<div class="contPagin">
+						<ol>
+							<li><<</li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>>></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="pieP">
+		<div class="lPP"><a id="aArriba" href="#cabecera">Ir Arriba</a></div>
+		<div class="nPP">Escribelo</div>
+		<div class="cPP">&copy; Felipe Callejas Buitrago - 2016</div>
+	</footer>
+	<script type="text/javascript" src="dist/js/app.js"></script>
+</body>
+</html>

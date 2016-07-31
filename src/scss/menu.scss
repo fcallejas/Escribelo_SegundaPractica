@@ -1,0 +1,78 @@
+.oMenu{
+	div{
+		display:none;
+	}
+
+	@include es-tableta{
+		div{
+			display:block;
+		}
+	}	
+}
+
+.menu{
+	padding:12px 5px 12px 5px;
+	border-bottom: 1px solid $clr-base4;
+	height: auto;
+
+	div{
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+	}
+
+	@include es-tableta{
+		.btnIngresar{
+			display:none;
+		}
+
+		ul{
+			float:left;
+		}
+
+		div{
+			float:left;
+			margin-right:5px;
+			height:auto;
+		}
+
+		height: 30px;
+	}
+
+	li{
+		margin-top:1px;
+		margin-left: 1px;
+		margin-right:1px;
+		cursor:pointer;
+		background-color:$clr-base1;
+		padding:3px;
+		border-radius:5px;
+		border: 1px solid $clr-base4;
+		-webkit-transition: all 0.5s;
+		transition: all 0.5s;
+
+		@include es-tableta{
+			display:inline-block;
+		}
+
+		&:hover{
+			background-color:$clr-base2;
+		}
+	}
+
+	input[type="text"]{
+		border-radius: 5px;
+		padding:5px;
+		border: 1px solid $clr-base4;
+		font-family:$f-principal;
+		width:95%;
+		margin-bottom:5px;
+
+		@include es-tableta{
+			width:50px;
+
+			&:focus {
+			    width:120px;
+			}
+		}
+	}
+}

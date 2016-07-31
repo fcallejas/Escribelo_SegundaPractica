@@ -1,0 +1,138 @@
+body{
+	background-color: $fondo-ppal;
+	color: $color-tx-ppal;
+	font-family:$f-principal;
+	font-size: $t-f-base;
+}
+
+textarea:focus, input:focus, button:focus{
+    outline: none;
+}
+
+h1{
+	font-family:$f-titulos;
+	font-size: $t-f-h1;
+}
+
+//ClearFix
+.clearfix {
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+	}
+	&:after {clear: both;}
+}
+
+.contenedor{
+	padding-top:60px;
+	width:100%;
+	max-width:1200px;
+	margin: 0 auto;
+	background-color: $fondo-ppal;
+}
+
+.cuerpo{
+	width:100%;
+	height:100%;
+	background-color: $clr-base1;
+}
+
+.pieP{
+	background-color: $clr-base3;
+	padding: 8px;
+	text-align:center;
+	border-top:1px solid $clr-base4;
+
+	.nPP{
+		font-family:$f-titulos;
+		font-size: $t-f-h3;
+		padding:3px;
+	}
+
+	.cPP{
+		font-size: $t-f-h6;
+	}
+
+	.lPP{
+		float:right;
+		cursor:pointer;
+		width:50px;
+		height:50px;
+		border:1px solid $clr-base4;
+		background-color:$clr-base1;
+		border-radius:50%;
+		text-align:center;
+		vertical-align:middle;
+		margin-top:-30px;
+		font-size: $t-f-h6;
+
+		&:hover{
+			background-color:$clr-base2;
+		}
+
+		-webkit-transition: all 0.5s;
+		transition: all 0.5s;
+
+		a{
+			text-decoration:none;
+		}
+
+		a:link {
+		    color: $color-tx-ppal;
+		}
+
+		a:visited {
+		    color: $color-tx-ppal;
+		}
+
+		a:hover {
+		   font-weight:bold;
+		}
+
+		a:active {
+		    color: $color-tx-ppal;
+		}
+	}
+}
+
+.contenido{
+	padding:10px;
+}
+
+.btnE{
+	border: 1px solid $clr-base3;
+	padding:8px;
+	border-radius:8px;
+	background-color:$clr-base1;
+	cursor:pointer;
+	font-family:$f-titulo;
+
+	&:hover{
+		background-color:$clr-base2;
+	}
+
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.oculto{
+	display:none;
+}
+
+progress{
+	width: 150px;
+	height: 5px;
+	display: block;
+	margin: 0 auto;
+	margin-top:5px;
+
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
